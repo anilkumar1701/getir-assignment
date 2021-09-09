@@ -1,0 +1,65 @@
+{
+  "name": "assignment-getir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "LOG_LEVEL=silent jest --runInBand --forceExit"
+  },
+  "author": "anil kumar",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@hapi/joi-date": "^2.0.1",
+    "@types/jest": "^27.0.1",
+    "cors": "^2.8.5",
+    "custom-env": "^2.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "http-status": "^1.5.0",
+    "jest": "^27.1.1",
+    "joi": "^17.4.2",
+    "mockingoose": "^2.15.2",
+    "mongoose": "^6.0.5",
+    "pino": "^6.13.2",
+    "pino-pretty": "^6.0.0",
+    "supertest": "^6.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-security": "^1.4.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "node-mocks-http": "^1.8.0",
+    "nodemon": "^2.0.0",
+    "prettier": "^2.0.5"
+  },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/**/?(*.)spec.js"
+    ],
+    "collectCoverageFrom": [
+      "./*.js",
+      "./**/*.js",
+      "!./index.js",
+      "!./test/integration/*.js",
+      "!./coverage/**/*.js",
+      "!./utils/*.js",
+      "!./startup/*.js"
+    ]
+  }
+}
